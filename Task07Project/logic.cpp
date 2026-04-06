@@ -5,3 +5,24 @@
 // которая считает количество нечётных цифр
 // в заданном целом числе.
 #include "logic.h" 
+int count_of_odd_digits(int number) {
+
+    number = number < 0 ? -number : number;
+
+    if (number == 0) {
+        return 0;
+    }
+ 
+
+    int last_digit = number % 10;
+
+    if (number == 10) {
+        return 0;
+    }
+
+    int counter = last_digit % 2 != 0 ? 1 : 0;
+
+    return counter + count_of_odd_digits(number / 10);
+}
+
+
