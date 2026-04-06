@@ -7,5 +7,17 @@
 #include "logic.h"
 
 int sum(int n, int m) {
-	return 0;
+
+	if (m < n) {
+		int t = m;
+		m = n;
+		n = t;
+	}
+
+	if (m == n) {
+		return n;
+	}
+
+
+	return n + sum(n + 1, m);
 }
