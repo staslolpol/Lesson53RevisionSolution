@@ -18,6 +18,5 @@ int sum(int n, int m) {
 		return n;
 	}
 
-
 	return n + sum(n + 1, m);
 }
