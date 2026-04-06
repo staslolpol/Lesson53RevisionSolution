@@ -13,16 +13,11 @@ int count_of_odd_digits(int number) {
         return 0;
     }
 
-    if (number == 10) {
-        return 0;
-    }
- 
-
     int last_digit = number % 10;
 
-    int counter = last_digit % 2 != 0 ? 1 : 0;
+    last_digit = last_digit % 5 == 0 ? last_digit : 0;
 
-    return counter + count_of_odd_digits(number / 10);
+    return last_digit + count_of_odd_digits(number / 10);
 }
 
 

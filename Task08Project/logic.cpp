@@ -12,11 +12,9 @@ int get_number(int index) {
 		return -1;
 	}
 
-	int number = 2;
-
 	if (index == 1) {
 		return 2;
 	}
 
-	return number * get_number(index - 1);
+	return 2 * get_number(index - 1);
 }
