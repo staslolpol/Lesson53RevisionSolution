@@ -3,8 +3,7 @@
 // 
 // Необходимо спроектировать и реализовать программу, 
 // которая вычисляет сумму чисел от 1 до N.
-
-long long sum(int number) {
+int sum(int number) {
     if (number == 0) {
         return 0;
     }
