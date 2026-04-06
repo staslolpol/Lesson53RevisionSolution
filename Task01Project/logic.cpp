@@ -1,0 +1,16 @@
+﻿// Task 01 [The sum I]
+// Сумма 
+// 
+// Необходимо спроектировать и реализовать программу, 
+// которая вычисляет сумму чисел от 1 до N.
+
+long long sum(int number) {
+    if (number == 0) {
+        return 0;
+    }
+    if (number < 0) {
+        return -1;
+    }
+
+    return number + sum(number - 1);
+}
